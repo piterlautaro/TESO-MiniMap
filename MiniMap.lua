@@ -10841,8 +10841,8 @@ local function OnLoaded(eventCode, addOnName)
     FyrMM.API_Check()
 
     if not FyrMM.HudElementRegistered then
-        HUD_MANAGER:RegisterKeyboardElement(GetControl("Fyr_MM"), "Minimap by Fyrakin", { defaultAnchor = ZO_Anchor:New(BOTTOMRIGHT, nil, BOTTOMRIGHT, -10, -10) }, COMPASS_OPTIONS) -- for Keyboard UI
-        HUD_MANAGER:RegisterGamepadElement(GetControl("Fyr_MM"), "Minimap by Fyrakin", { defaultAnchor = ZO_Anchor:New(BOTTOMRIGHT, nil, BOTTOMRIGHT, -10, -10) }, COMPASS_OPTIONS) --for Gamepad UI
+        HUD_MANAGER:RegisterKeyboardElement(GetControl("Fyr_MM"), "Minimap by Fyrakin", { defaultAnchor = ZO_Anchor:New(BOTTOMRIGHT, nil, BOTTOMRIGHT, -10, -20) }, COMPASS_OPTIONS) -- for Keyboard UI
+        HUD_MANAGER:RegisterGamepadElement(GetControl("Fyr_MM"), "Minimap by Fyrakin", { defaultAnchor = ZO_Anchor:New(BOTTOMRIGHT, nil, BOTTOMRIGHT, -10, -20) }, COMPASS_OPTIONS) --for Gamepad UI
         FyrMM.HudElementRegistered = true
     end
 

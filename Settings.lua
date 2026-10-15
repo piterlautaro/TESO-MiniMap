@@ -929,8 +929,8 @@ FyrMM.Defaults = {
 		["HideZoomLevel"] = false,
 		["ShowBorder"] = true,
 		["ClampedToScreen"] = true,
-		["MapHeight"] = 280,
-		["MapWidth"] = 280,
+		["MapHeight"] = 210,
+		["MapWidth"] = 210,
 		["position"] = {
 			["point"] = TOPLEFT,
 			["relativePoint"] = TOPLEFT,
@@ -2658,12 +2658,12 @@ FyrMM.Panel = {
 								min = 50, max = zo_round(GuiRoot:GetWidth()), step = 1,
 								getFunc = function() return MM_GetMapWidth() end,
 								setFunc = function(value) MM_SetMapWidth(value) end,
-								width = "half",	disabled = function() return FyrMM.SV.LockResizing end, default = 280, },
+								width = "half",	disabled = function() return FyrMM.SV.LockResizing end, default = 210, },
 						[2] = {	type = "slider", name = GetString(SI_MM_SETTING_HEIGHT), tooltip = GetString(SI_MM_SETTING_HEIGHT_TOOLTIP),
 								min = 50, max = zo_round(GuiRoot:GetHeight()), step = 1,
 								getFunc = function() return MM_GetMapHeight() end,
 								setFunc = function(value) MM_SetMapHeight(value) end,
-								width = "half",	 disabled = function() return FyrMM.SV.LockResizing end, default = 280, },
+								width = "half",	 disabled = function() return FyrMM.SV.LockResizing end, default = 210, },
 						[3] = { type = "checkbox", name = GetString(SI_MM_SETTING_LOCK), tooltip = GetString(SI_MM_SETTING_LOCK_TOOLTIP),
 								getFunc = function() return FyrMM.SV.LockResizing end,
 								setFunc = function(value) MM_SetLockResizing(value) end,
@@ -3131,12 +3131,12 @@ function MM_ResetToDefaults() -- Hardcoded reset
 	local pos = {}
 	pos.anchorTo = GetControl(pos.anchorTo)
 	--Fyr_MM:SetAnchor(TOPLEFT, pos.anchorTo, TOPLEFT, 0, 0)
-	FyrMM.SV.MapHeight = 280
-	FyrMM.SV.MapWidth = 280
-	MM_SetMapHeight(280)
-	MM_SetMapWidth(280)
-	Fyr_MM_Border:SetWidth(288)
-	Fyr_MM_Border:SetHeight(288)
+	FyrMM.SV.MapHeight = 210
+	FyrMM.SV.MapWidth = 210
+	MM_SetMapHeight(210)
+	MM_SetMapWidth(210)
+	Fyr_MM_Border:SetWidth(218)
+	Fyr_MM_Border:SetHeight(218)
 	FyrMM.SV.MapAlpha = 100
 	FyrMM.SV.Heading = "CAMERA"
 	FyrMM.SV.PinScale = 75
